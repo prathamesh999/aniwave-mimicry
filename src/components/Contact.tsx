@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
+import { MapPin } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -52,9 +53,12 @@ const Contact = () => {
               
               <div>
                 <h4 className="text-lg font-medium mb-2">Location</h4>
-                <address className="text-primary/80 not-italic">
-                  Tokyo Creative District<br />
-                  Shibuya, Tokyo, Japan
+                <address className="text-primary/80 not-italic flex items-start">
+                  <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-primary/60" />
+                  <span>
+                    Chinchwad<br />
+                    Pune, Maharashtra, India
+                  </span>
                 </address>
               </div>
               
