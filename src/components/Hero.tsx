@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ShoppingBag } from "lucide-react";
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -38,26 +38,27 @@ const Hero = () => {
       
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8 opacity-0 animate-slide-up animation-delay-300">
-          <span className="bg-primary/5 text-primary/80 px-4 py-2 rounded-full text-sm font-medium">Crafting Digital Experiences</span>
+          <span className="bg-primary/5 text-primary/80 px-4 py-2 rounded-full text-sm font-medium">Premium Anime T-Shirts</span>
         </div>
         
         <h1 
           ref={titleRef}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
         >
-          Bringing Your Anime World to Life
+          Wear Your Favorite Anime
         </h1>
         
         <p className="text-xl md:text-2xl text-primary/80 max-w-2xl mx-auto mb-12 opacity-0 animate-slide-up animation-delay-600">
-          We create immersive digital experiences that connect with your audience and elevate your anime content.
+          High-quality t-shirts featuring exclusive anime designs, created by fans for fans.
         </p>
         
         <div className="flex flex-col md:flex-row justify-center gap-6 opacity-0 animate-slide-up animation-delay-900">
           <button 
             onClick={scrollToWork}
-            className="rounded-md bg-primary text-white px-8 py-3 font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+            className="rounded-md bg-primary text-white px-8 py-3 font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg flex items-center justify-center gap-2"
           >
-            Explore Our Work
+            <ShoppingBag size={18} />
+            Shop Collection
           </button>
           <button 
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}

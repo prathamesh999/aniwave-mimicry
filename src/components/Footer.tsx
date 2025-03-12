@@ -1,5 +1,6 @@
 
 import React from "react";
+import { ShoppingBag, Shirt, Tag, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,17 +15,24 @@ const Footer = () => {
               <span className="text-primary/80">wave</span>
             </a>
             <p className="text-primary/70 max-w-xs">
-              Crafting exceptional anime-inspired digital experiences for clients around the world.
+              Premium anime-inspired t-shirts designed with passion for true fans.
             </p>
           </div>
           
           <div>
-            <h4 className="font-medium text-lg mb-4">Quick Links</h4>
+            <h4 className="font-medium text-lg mb-4">Shop</h4>
             <ul className="space-y-3">
-              {["Work", "About", "Contact", "Blog", "Careers"].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-primary/70 hover:text-primary transition-colors animated-underline">
-                    {item}
+              {[
+                { name: "New Arrivals", icon: <Tag size={14} /> },
+                { name: "Bestsellers", icon: <Heart size={14} /> },
+                { name: "Limited Editions", icon: <Shirt size={14} /> },
+                { name: "Size Guide", icon: <ShoppingBag size={14} /> },
+                { name: "Gift Cards", icon: <ShoppingBag size={14} /> }
+              ].map((item) => (
+                <li key={item.name}>
+                  <a href="#" className="text-primary/70 hover:text-primary transition-colors animated-underline flex items-center gap-2">
+                    {item.icon}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -34,7 +42,7 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-lg mb-4">Newsletter</h4>
             <p className="text-primary/70 mb-4">
-              Subscribe to our newsletter to stay updated with our latest projects and insights.
+              Subscribe to get 10% off your first order and updates on new designs.
             </p>
             <form className="flex gap-2">
               <input
@@ -54,11 +62,11 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-primary/5">
           <p className="text-primary/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Aniwave Studio. All rights reserved.
+            © {currentYear} Aniwave T-Shirts. All rights reserved.
           </p>
           
           <div className="flex gap-6">
-            {["Twitter", "Instagram", "Dribbble", "Behance"].map((social) => (
+            {["Instagram", "TikTok", "Twitter", "Facebook"].map((social) => (
               <a key={social} href="#" className="text-primary/60 hover:text-primary transition-colors text-sm">
                 {social}
               </a>
