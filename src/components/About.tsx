@@ -43,8 +43,8 @@ const About = () => {
             <div className="space-y-4">
               <div className="bg-white rounded-xl overflow-hidden shadow-sm aspect-square">
                 <img 
-                  src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=600&auto=format&fit=crop" 
-                  alt="T-shirt design process" 
+                  src="/lovable-uploads/ce7dae93-29c8-4249-bb08-991d329b832f.png" 
+                  alt="T-shirt with lip design" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
