@@ -2,6 +2,10 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { ShoppingCart, Tag } from "lucide-react";
+import "./WhatsApp Image 2025-03-12 at 21.04.58_c2532b9d.jpg";
+import img from "./WhatsApp Image 2025-03-12 at 21.04.58_c2532b9d.jpg";
+import img2 from "./t2.jpg";
+import img3 from "./t3.jpg";
 
 interface Product {
   id: number;
@@ -19,7 +23,7 @@ const products: Product[] = [
     description: "A neo-Tokyo inspired design featuring iconic motorcycle scenes from the classic cyberpunk anime.",
     category: "Limited Edition",
     price: 29.99,
-    image: "https://images.unsplash.com/photo-1569701813229-33284b643e3c?q=80&w=1200&auto=format&fit=crop",
+    image: img,
   },
   {
     id: 2,
@@ -27,7 +31,7 @@ const products: Product[] = [
     description: "Featuring characters from Spirited Away, My Neighbor Totoro, and Princess Mononoke.",
     category: "Fan Favorites",
     price: 34.99,
-    image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1200&auto=format&fit=crop",
+    image: img2,
   },
   {
     id: 3,
@@ -35,7 +39,7 @@ const products: Product[] = [
     description: "Urban cyberpunk cityscape design inspired by the iconic anime cityscapes.",
     category: "Bestseller",
     price: 27.99,
-    image: "https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1200&auto=format&fit=crop",
+    image: img3,
   },
   {
     id: 4,
