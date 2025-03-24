@@ -2,7 +2,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { ShoppingCart, Tag } from "lucide-react";
-import "./WhatsApp Image 2025-03-12 at 21.04.58_c2532b9d.jpg";
 import img from "./WhatsApp Image 2025-03-12 at 21.04.58_c2532b9d.jpg";
 import img2 from "./t2.jpg";
 import img3 from "./t3.jpg";
@@ -53,11 +52,11 @@ const products: Product[] = [
 
 const Featured = () => {
   return (
-    <section id="work" className="py-24 px-6 md:px-12">
+    <section id="work" className="py-32 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 reveal">
-          <span className="text-sm uppercase tracking-widest text-primary/60 font-medium mb-3 block">Featured Collection</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Our Popular Designs</h2>
+          <span className="text-xs uppercase tracking-widest text-white/60 font-mono mb-3 block">Featured Collection</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter">Our Popular Designs</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -65,11 +64,11 @@ const Featured = () => {
             <div 
               key={product.id} 
               className={cn(
-                "group relative reveal", 
+                "group relative reveal hover-lift", 
                 index % 2 === 0 ? "stagger-1" : "stagger-3"
               )}
             >
-              <div className="relative overflow-hidden rounded-xl mb-6 aspect-[4/3]">
+              <div className="relative overflow-hidden mb-6 aspect-[3/4]">
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img 
                   src={product.image} 
@@ -77,25 +76,24 @@ const Featured = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium z-10">
+                <div className="absolute top-3 left-3 bg-black text-white px-3 py-1 text-xs font-mono uppercase tracking-wide z-10">
                   <span className="flex items-center gap-1">
-                    <Tag size={12} />
                     {product.category}
                   </span>
                 </div>
               </div>
               
               <div className="relative">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl md:text-2xl font-display font-bold">{product.title}</h3>
-                  <span className="text-lg font-bold">${product.price}</span>
+                <div className="flex justify-between items-end gap-4 mb-2">
+                  <h3 className="text-xl md:text-2xl font-display font-bold tracking-tighter">{product.title}</h3>
+                  <span className="text-sm font-mono">${product.price}</span>
                 </div>
-                <p className="text-primary/80 mb-4">{product.description}</p>
+                <p className="text-white/60 text-sm mb-4">{product.description}</p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center gap-2 bg-primary/5 hover:bg-primary/10 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 text-xs font-mono uppercase tracking-wide transition-colors hover:bg-white/90"
                 >
-                  <ShoppingCart size={16} />
+                  <ShoppingCart size={14} />
                   Add to Cart
                 </a>
               </div>
