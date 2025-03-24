@@ -37,15 +37,15 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 px-6 md:px-12 backdrop-blur-md",
-        scrolled ? "py-4 bg-white/80 shadow-sm" : "py-6 bg-transparent"
+        "fixed top-0 w-full z-50 transition-all duration-300 px-6 md:px-12",
+        scrolled ? "py-4 bg-black/90 backdrop-blur-md" : "py-6 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 font-display font-bold text-xl">
-          <span className="text-primary">ani</span>
-          <span className="text-primary/80">wave</span>
+          <span className="text-white">ani</span>
+          <span className="text-white/80">wave</span>
         </a>
 
         {/* Desktop Menu */}
@@ -54,7 +54,7 @@ const Navbar = () => {
             <button
               key={item}
               onClick={() => handleNavClick(item)}
-              className="text-sm uppercase tracking-wider font-medium animated-underline"
+              className="text-sm uppercase tracking-wider font-medium animated-underline text-white"
             >
               {item}
             </button>
@@ -64,7 +64,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden flex items-center"
+          className="md:hidden flex items-center text-white"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,7 +74,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 bg-white flex flex-col items-center justify-center space-y-10 md:hidden transition-all duration-500 ease-in-out",
+          "fixed inset-0 bg-black flex flex-col items-center justify-center space-y-10 md:hidden transition-all duration-500 ease-in-out",
           isOpen ? "opacity-100 z-40" : "opacity-0 -z-10"
         )}
       >
@@ -83,7 +83,7 @@ const Navbar = () => {
             key={item}
             onClick={() => handleNavClick(item)}
             className={cn(
-              "text-xl uppercase tracking-wider font-medium animated-underline",
+              "text-xl uppercase tracking-wider font-medium animated-underline text-white",
               isOpen ? `animate-fade-in delay-${i * 100}` : ""
             )}
           >
