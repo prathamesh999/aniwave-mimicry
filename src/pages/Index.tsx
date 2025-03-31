@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Featured from "@/components/Featured";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import NewArrivals from "@/components/NewArrivals";
 
 const Index = () => {
   // Initialize scroll animations
@@ -30,6 +31,7 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
+      <NewArrivals />
       <Featured />
       <About />
       <Contact />
