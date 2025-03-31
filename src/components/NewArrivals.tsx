@@ -53,10 +53,10 @@ const products: Product[] = [
 
 const NewArrivals = () => {
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#f1f1f1]">
+    <section className="py-24 px-6 md:px-12 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center reveal">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tighter text-black uppercase">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tighter text-white uppercase">
             New Arrivals
           </h2>
         </div>
@@ -71,14 +71,14 @@ const NewArrivals = () => {
               )}
             >
               <div className="relative overflow-hidden mb-4 aspect-[3/4]">
-                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img 
                   src={product.image} 
                   alt={product.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 bg-black text-white px-2 py-1 text-xs font-mono uppercase tracking-wide z-10">
+                <div className="absolute top-3 left-3 bg-white text-black px-2 py-1 text-xs font-mono uppercase tracking-wide z-10">
                   <span className="flex items-center gap-1">
                     SAVE {product.discount}%
                   </span>
@@ -86,10 +86,10 @@ const NewArrivals = () => {
               </div>
               
               <div className="relative text-center">
-                <h3 className="text-sm font-mono uppercase tracking-wide text-black mb-2">{product.title}</h3>
+                <h3 className="text-sm font-mono uppercase tracking-wide text-white mb-2">{product.title}</h3>
                 <div className="flex justify-center items-center gap-3">
-                  <span className="text-sm font-mono text-black">RS. {product.salePrice.toLocaleString()}</span>
-                  <span className="text-xs font-mono text-black/60 line-through">RS. {product.originalPrice.toLocaleString()}</span>
+                  <span className="text-sm font-mono text-white">RS. {product.salePrice.toLocaleString()}</span>
+                  <span className="text-xs font-mono text-white/60 line-through">RS. {product.originalPrice.toLocaleString()}</span>
                 </div>
               </div>
             </div>
